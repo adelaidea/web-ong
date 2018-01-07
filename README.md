@@ -4,3 +4,5 @@ O Objetivo desse projeto é fornecer uma plataforma para organizações não gov
 
 
 Esse projeto não tem fins lucrativos, e toda ajuda é bem vinda!
+
+Canal do Slack webong.slack.com
