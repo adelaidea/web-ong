@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="SimpleInjectorInitializer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="SimpleInjector" Version="4.0.12" />
   </ItemGroup>
 
