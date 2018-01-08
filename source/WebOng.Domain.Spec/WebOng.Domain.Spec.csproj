@@ -7,6 +7,7 @@
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="DomainServices\" />
+    <Folder Include="DomainValidators\" />
     <Folder Include="ValueObjects\" />
   </ItemGroup>
 
