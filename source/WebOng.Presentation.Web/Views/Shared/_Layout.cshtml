@@ -7,48 +7,221 @@
     <title>@ViewData["Title"] - WebOng.Presentation.Web</title>
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link href="~/assets/css/bootstrap-extend.css" rel="stylesheet" />
+        <link href="~/assets/css/default.css" rel="stylesheet" />
+
+        <!-- Plugins -->
+        <link href="~/assets/css/animsition.css" rel="stylesheet" />
+
+        <!-- Fonts -->
+        <link href="~/assets/fonts/web-icons.css" rel="stylesheet" />
+        <link href="~/assets/fonts/web-icons.css" rel="stylesheet" />
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link href="~/assets/css/bootstrap-extend.min.css" rel="stylesheet" />
+        <link href="~/assets/css/default.min.css" rel="stylesheet" />
+
+        <!-- Plugins -->
+        <link href="~/assets/css/animsition.min.css" rel="stylesheet" />
+
+        <!-- Fonts -->
+        <link href="~/assets/fonts/web-icons.min.css" rel="stylesheet" />
+        <link href="~/assets/fonts/web-icons.min.css" rel="stylesheet" />
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
     @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">WebOng.Presentation.Web</a>
+<body class="site-navbar-small">
+    @*<nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">WebOng.Presentation.Web</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-            </div>
+        </nav>*@
+
+    <!-- Menu -->
+    <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega navbar-inverse"
+         role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided"
+                    data-toggle="menubar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-collapse"
+                    data-toggle="collapse">
+                <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+            </button>
+            <a class="navbar-brand navbar-brand-center" href="../index.html">
+                <img class="navbar-brand-logo navbar-brand-logo-normal" src="../../assets/images/logo.png"
+                     title="Remark">
+                <img class="navbar-brand-logo navbar-brand-logo-special" src="../../assets/images/logo-blue.png"
+                     title="Remark">
+                <span class="navbar-brand-text hidden-xs"> Remark</span>
+            </a>
+            <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-search"
+                    data-toggle="collapse">
+                <span class="sr-only">Toggle Search</span>
+                <i class="icon wb-search" aria-hidden="true"></i>
+            </button>
         </div>
     </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - WebOng.Presentation.Web</p>
-        </footer>
+
+    <div class="site-menubar site-menubar-light">
+        <div class="site-menubar-body">
+            <div>
+                <div>
+                    <ul class="site-menu">
+                        <li class="site-menu-category">General</li>
+                        <li class="dropdown site-menu-item has-sub">
+                            <a class="dropdown-toggle" href="javascript:void(0)" data-dropdown-toggle="false">
+                                <i class="site-menu-icon wb-layout" aria-hidden="true"></i>
+                                <span class="site-menu-title">Layouts</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="site-menu-scroll-wrap is-list">
+                                    <div>
+                                        <div>
+                                            <ul class="site-menu-sub site-menu-normal-list">
+                                                <li class="site-menu-item">
+                                                    <a class="animsition-link" href="../layouts/grids.html">
+                                                        <span class="site-menu-title">Grid Scaffolding</span>
+                                                    </a>
+                                                </li>
+                                                <li class="site-menu-item">
+                                                    <a class="animsition-link" href="../layouts/layout-grid.html">
+                                                        <span class="site-menu-title">Layout Grid</span>
+                                                    </a>
+                                                </li>
+                                                <li class="site-menu-item">
+                                                    <a class="animsition-link" href="../layouts/headers.html">
+                                                        <span class="site-menu-title">Different Headers</span>
+                                                    </a>
+                                                </li>
+                                                <li class="site-menu-item">
+                                                    <a class="animsition-link" href="../layouts/panel-transition.html">
+                                                        <span class="site-menu-title">Panel Transition</span>
+                                                    </a>
+                                                </li>
+                                                <li class="site-menu-item">
+                                                    <a class="animsition-link" href="../layouts/boxed.html">
+                                                        <span class="site-menu-title">Boxed Layout</span>
+                                                    </a>
+                                                </li>
+                                                <li class="site-menu-item">
+                                                    <a class="animsition-link" href="../layouts/two-columns.html">
+                                                        <span class="site-menu-title">Two Columns</span>
+                                                    </a>
+                                                </li>
+                                                <li class="site-menu-item">
+                                                    <a class="animsition-link" href="../layouts/bordered-header.html">
+                                                        <span class="site-menu-title">Bordered Header</span>
+                                                    </a>
+                                                </li>
+                                                <li class="site-menu-item">
+                                                    <a class="animsition-link" href="../layouts/page-aside-fixed.html">
+                                                        <span class="site-menu-title">Page Aside Fixed</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Fim Menu -->
+
+    <div class="page animsition">
+        <div class="page-header">
+            <h1 class="page-title">Form General Elements</h1>
+            <ol class="breadcrumb">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="javascript:void(0)">Forms</a></li>
+                <li class="active">General</li>
+            </ol>
+            <div class="page-header-actions">
+                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round"
+                        data-toggle="tooltip" data-original-title="Edit">
+                    <i class="icon wb-pencil" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round"
+                        data-toggle="tooltip" data-original-title="Refresh">
+                    <i class="icon wb-refresh" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round"
+                        data-toggle="tooltip" data-original-title="Setting">
+                    <i class="icon wb-settings" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel Head</h3>
+                </div>
+                <div class="panel-body container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer-legal">© 2016 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
+        <div class="site-footer-right">
+            Crafted with <i class="red-600 wb wb-heart"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>
+        </div>
+    </footer>
+
+    @*<div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; 2018 - WebOng.Presentation.Web</p>
+            </footer>
+        </div>*@
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/assets/js/modernizr.js"></script>
+        <script src="~/assets/js/animsition.js"></script>
+        <script src="~/assets/js/core.js"></script>
+        <script src="~/assets/js/default.js"></script>
+        <script src="~/assets/js/menu.js"></script>
+        <script src="~/assets/js/menubar.js"></script>
+        <script src="~/assets/js/sidebar.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment names="Staging,Production">
@@ -64,6 +237,13 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
+        <script src="~/assets/js/modernizr.min.js"></script>
+        <script src="~/assets/js/animsition.min.js"></script>
+        <script src="~/assets/js/core.min.js"></script>
+        <script src="~/assets/js/default.min.js"></script>
+        <script src="~/assets/js/menu.min.js"></script>
+        <script src="~/assets/js/menubar.min.js"></script>
+        <script src="~/assets/js/sidebar.min.js"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
