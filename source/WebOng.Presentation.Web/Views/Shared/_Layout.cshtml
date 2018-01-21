@@ -15,7 +15,7 @@
 
         <!-- Fonts -->
         <link href="~/assets/fonts/web-icons.css" rel="stylesheet" />
-        <link href="~/assets/fonts/web-icons.css" rel="stylesheet" />
+        <link href="~/assets/fonts/brand-icons.css" rel="stylesheet" />
         <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
         <link rel="stylesheet" href="~/css/site.css" />
@@ -32,7 +32,7 @@
 
         <!-- Fonts -->
         <link href="~/assets/fonts/web-icons.min.css" rel="stylesheet" />
-        <link href="~/assets/fonts/web-icons.min.css" rel="stylesheet" />
+        <link href="~/assets/fonts/brand-icons.min.css" rel="stylesheet" />
         <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
@@ -76,9 +76,9 @@
                 <i class="icon wb-more-horizontal" aria-hidden="true"></i>
             </button>
             <a class="navbar-brand navbar-brand-center" href="../index.html">
-                <img class="navbar-brand-logo navbar-brand-logo-normal" src="../../assets/images/logo.png"
+                <img class="navbar-brand-logo navbar-brand-logo-normal"
                      title="Remark">
-                <img class="navbar-brand-logo navbar-brand-logo-special" src="../../assets/images/logo-blue.png"
+                <img class="navbar-brand-logo navbar-brand-logo-special"
                      title="Remark">
                 <span class="navbar-brand-text hidden-xs"> Remark</span>
             </a>
@@ -87,6 +87,78 @@
                 <span class="sr-only">Toggle Search</span>
                 <i class="icon wb-search" aria-hidden="true"></i>
             </button>
+        </div>
+
+        <div class="navbar-container container-fluid">
+            <!-- Navbar Collapse -->
+            <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+                <!-- Navbar Toolbar -->
+                <ul class="nav navbar-toolbar">
+                    <li class="hidden-float" id="toggleMenubar">
+                        <a data-toggle="menubar" href="#" role="button">
+                            <i class="icon hamburger hamburger-arrow-left">
+                                <span class="sr-only">Toggle menubar</span>
+                                <span class="hamburger-bar"></span>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="hidden-xs" id="toggleFullscreen">
+                        <a class="icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+                            <span class="sr-only">Toggle fullscreen</span>
+                        </a>
+                    </li>
+                    <li class="hidden-float">
+                        <a class="icon wb-search" data-toggle="collapse" href="#" data-target="#site-navbar-search"
+                           role="button">
+                            <span class="sr-only">Toggle Search</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- End Navbar Toolbar -->
+                <!-- Navbar Toolbar Right -->
+                <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+                    <li class="dropdown">
+                        <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+                           data-animation="scale-up" role="button">
+                            <span class="avatar avatar-online">
+                                <img src="../../../global/portraits/5.jpg" alt="...">
+                                <i></i>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation">
+                                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Profile</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-payment" aria-hidden="true"></i> Billing</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Settings</a>
+                            </li>
+                            <li class="divider" role="presentation"></li>
+                            <li role="presentation">
+                                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- End Navbar Toolbar Right -->
+            </div>
+            <!-- End Navbar Collapse -->
+            <!-- Site Navbar Seach -->
+            <div class="collapse navbar-search-overlap" id="site-navbar-search">
+                <form role="search">
+                    <div class="form-group">
+                        <div class="input-search">
+                            <i class="input-search-icon wb-search" aria-hidden="true"></i>
+                            <input type="text" class="form-control" name="site-search" placeholder="Search...">
+                            <button type="button" class="input-search-close icon wb-close" data-target="#site-navbar-search"
+                                    data-toggle="collapse" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- End Site Navbar Seach -->
         </div>
     </nav>
 
