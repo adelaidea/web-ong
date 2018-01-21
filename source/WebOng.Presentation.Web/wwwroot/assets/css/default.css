@@ -892,12 +892,12 @@ ul.site-menu {
   color: #a3afb7;
 }
 .page-header {
-  position: relative;
-  padding: 30px 30px;
-  margin-top: 0;
-  margin-bottom: 0;
-  background: transparent;
-  border-bottom: none;
+    position: relative;
+    padding: 30px 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: 0 0;
+    border-bottom: none;
 }
 .page-header-actions {
   position: absolute;

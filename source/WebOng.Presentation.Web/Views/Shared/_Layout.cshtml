@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WebOng.Presentation.Web</title>
     <environment names="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+
+        <link href="~/assets/css/bootstrap.css" rel="stylesheet" />
         <link href="~/assets/css/bootstrap-extend.css" rel="stylesheet" />
         <link href="~/assets/css/default.css" rel="stylesheet" />
 
@@ -233,7 +235,7 @@
     </div>
     <!-- Fim Menu -->
 
-    <div class="page animsition">
+    <div class="page animsition" style="animation-duration: 800ms; opacity: 1;">
         <div class="page-header">
             <h1 class="page-title">Form General Elements</h1>
             <ol class="breadcrumb">
@@ -288,7 +290,6 @@
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/assets/js/modernizr.js"></script>
-        <script src="~/assets/js/animsition.js"></script>
         <script src="~/assets/js/core.js"></script>
         <script src="~/assets/js/default.js"></script>
         <script src="~/assets/js/menu.js"></script>
@@ -310,12 +311,12 @@
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
         <script src="~/assets/js/modernizr.min.js"></script>
-        <script src="~/assets/js/animsition.min.js"></script>
         <script src="~/assets/js/core.min.js"></script>
         <script src="~/assets/js/default.min.js"></script>
         <script src="~/assets/js/menu.min.js"></script>
         <script src="~/assets/js/menubar.min.js"></script>
         <script src="~/assets/js/sidebar.min.js"></script>
+        <script src="~/assets/js/components/animsition.min.js"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
